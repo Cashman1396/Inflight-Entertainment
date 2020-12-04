@@ -1,16 +1,16 @@
-movies = [20,40,60,80,200,140,60]
+movies = [20,40,60,80,100]
 
-flight = 240
+flight = 140
 
 def check_movies(flight, movies)
   count = 0
 
-  diff = movies.map{ |movie| flight - movie}
+  diff = movies
 
   movies.each do |movie|
     diff.each do |diff|
-      if movie + diff == flight && (movies.count(movie) > 1)
-        puts diff 
+      if movie + diff == flight && movie != diff
+        puts diff
         return true
       end 
     end 
